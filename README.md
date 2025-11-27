@@ -1,12 +1,10 @@
 # DeepCubeA
 This is the code for [DeepCubeA](https://cse.sc.edu/~foresta/assets/files/SolvingTheRubiksCubeWithDeepReinforcementLearningAndSearch_Final.pdf) for python3 and PyTorch.
-The original python2, tensorflow code can be found on [CodeOcean](https://codeocean.com/capsule/5723040/tree/v1).
 
 This currently contains the code for using DeepCubeA to solve the Rubik's cube, 15-puzzle, 24-puzzle, 35-puzzle, 48-puzzle, Lights Out, and Sokoban.
 
-You can also adapt this code to use DeepCubeA to solve new problems that you might be working on.
+I am currently trying to reimplement 35-puzzle, 48-puzzle, Lights Out, and Sokoban.
 
-For any issues, please contact Forest Agostinelli (foresta@cse.sc.edu)
 
 # Setup
 For required python packages, please see requirements.txt.
