@@ -22,6 +22,9 @@ def get_environment(env_name: str) -> Environment:
     elif env_name == 'sokoban':
         from environments.sokoban import Sokoban
         env = Sokoban(10, 4)
+    elif env_name == 'bloxorz':  
+        from environments.bloxorz import Bloxorz  
+        env = Bloxorz(grid_size=(8, 8))
     else:
         raise ValueError('No known environment %s' % env_name)
 
