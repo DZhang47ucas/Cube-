@@ -82,6 +82,7 @@ python search_methods/astar.py --states data/sokoban/test/data_0.pkl --model sav
 python scripts/compare_solutions.py --soln1 results/sokoban/results.pkl --soln2 results/sokoban/results.pkl
 
 ### Bloxorz
+###### Train cost-to-go function
 python ctg_approx/avi.py --env bloxorz --states_per_update 5000 --batch_size 100 --nnet_name bloxorz_model --max_itrs 5000 --loss_thresh 0.2 --back_max 50 --num_update_procs 2
 
 ###### Solve with A* search, use --verbose for more information
