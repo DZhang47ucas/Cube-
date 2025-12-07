@@ -80,3 +80,13 @@ python search_methods/astar.py --states data/sokoban/test/data_0.pkl --model sav
 
 ###### See solution results
 python scripts/compare_solutions.py --soln1 results/sokoban/results.pkl --soln2 results/sokoban/results.pkl
+
+### Bloxorz
+python ctg_approx/avi.py --env bloxorz --states_per_update 5000 --batch_size 100 --nnet_name bloxorz_model --max_itrs 5000 --loss_thresh 0.2 --back_max 50 --num_update_procs 2
+
+###### Solve with A* search, use --verbose for more information
+# NOTE: is faster when just using one GPU because the batch size is small
+python search_methods/astar.py --states data/bloxorz/test/data_0.pkl --model saved_models/bloxorz_model/current/ --env bloxorz --weight 0.8 --batch_size 200 --results_dir results/bloxorz/ --language cpp --nnet_batch_size 100
+
+###### See solution results
+python compare_bloxorz_solutions.py --test_data data/bloxorz/test/data_0.pkl --results results/bloxorz/results.pkl --max_states 20 --max_depth 20
