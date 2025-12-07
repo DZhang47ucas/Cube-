@@ -3,7 +3,7 @@ This is the code for [DeepCubeA](https://cse.sc.edu/~foresta/assets/files/Solvin
 
 This currently contains the code for using DeepCubeA to solve the Rubik's cube, 15-puzzle, 24-puzzle, 35-puzzle, 48-puzzle, Lights Out, and Sokoban.
 
-I am currently trying to reimplement 35-puzzle, 48-puzzle, Lights Out, and Sokoban.
+35-puzzle, 48-puzzle, Lights Out, and Sokoban currently do not work
 
 
 # Setup
