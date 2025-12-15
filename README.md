@@ -1,9 +1,7 @@
-# DeepCubeA
+# DeepCubeA Reimplementation
 This is the code for [DeepCubeA](https://cse.sc.edu/~foresta/assets/files/SolvingTheRubiksCubeWithDeepReinforcementLearningAndSearch_Final.pdf) for python3 and PyTorch.
 
-This currently contains the code for using DeepCubeA to solve the Rubik's cube, 15-puzzle, 24-puzzle, 35-puzzle, 48-puzzle, Lights Out, and Sokoban.
-
-35-puzzle, 48-puzzle, Lights Out, and Sokoban currently do not work
+This currently contains the code for using DeepCubeA to solve the Rubik's cube, 15-puzzle, 24-puzzle, 35-puzzle, and bloxorz on windows
 
 
 # Setup
@@ -20,13 +18,9 @@ directory to your python path.
 Note that some of the hyperparameters may be slightly different than those in the paper as they were later 
 found to give slightly better results.
 
-For Sokoban, instead of starting from the goal and pulling boxes, as was done in the paper,
-this code starts from random states, takes a random walk, and sets the location of the boxes at the end of the random walk as the goal positions for the boxes. 
-This change was made as it made the code simpler for Sokoban. This approach is similar in spirit to [hindsight experience replay](https://proceedings.neurips.cc/paper/2017/file/453fadbd8a1a3af50a9df4df899537b5-Paper.pdf).
-
 There are pre-trained models in the `saved_models/` directory as well as `output.txt` files to let you know what output to expect.
 
-These models were trained with 1-4 GPUs and 20-30 CPUs. This varies throughout training as the training is often stopped and started again to make room for other processes.
+These models were trained with 1 GPU and 1 CPUs.
 
 There are pre-computed results of A* search in the `results/` directory. 
 
@@ -74,14 +68,6 @@ given to the DNN can be controlled with `--update_nnet_batch_size` for the `avi.
 the `astar.py` file. Reduce this value if your GPUs are running out of memory during approximate value iteration or 
 during A* search.
 
-# Compiling C++ for A* Search
-`cd cpp/`
-
-`make`
-
-If you are not able to get the C++ version working on your computer, you can change the `--language` switch for
-`search_methods/astar.py` from `--language cpp` to `--language python`.
-Note that the C++ version is generally faster.
 
 # Citation
 To cite this project, please use
