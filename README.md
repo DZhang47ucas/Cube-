@@ -1,7 +1,7 @@
 # DeepCubeA Reimplementation
 This is the code for [DeepCubeA](https://cse.sc.edu/~foresta/assets/files/SolvingTheRubiksCubeWithDeepReinforcementLearningAndSearch_Final.pdf) for python3 and PyTorch.
 
-This currently contains the code for using DeepCubeA to solve the Rubik's cube, 15-puzzle, 24-puzzle, 35-puzzle, and bloxorz on windows
+This currently contains the code for using DeepCubeA to solve the Rubik's cube, 15-puzzle, 24-puzzle, and bloxorz on windows. We realized that the code for 35-puzzle, 48-puzzle, sokoban and lightsout 7 were not reproducible.
 
 
 # Setup
@@ -51,6 +51,8 @@ See the implementations in `environments/` for examples.
 After implementing your method, edit `utils/env_utils.py` to return your environment object given your chosen keyword.
 
 Use `tests/timing_test.py` to make sure basic aspects of your implementation are working correctly.
+
+One of the new environments created in this reproduction was the game Bloxorz. The environment files and objects are already added.
 
 # Parallelism
 Training and solving can be easily parallelized across multiple CPUs and GPUs.
